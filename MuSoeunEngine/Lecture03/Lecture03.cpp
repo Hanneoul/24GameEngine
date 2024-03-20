@@ -1,20 +1,21 @@
 ﻿#include <iostream>
 
-using namespace std;
+//using namespace std;
 
 int main()
 {
 	int num = 0;
-	string name;
-	while (num != 9999)
+	std::string name;
+	std::cout << "BH: 아힘들다..." << std::endl;
+
+	while (num != 18) 
 	{
-		cout << "게임이 실행됐습니다" << endl;
-		cout << "내가 싫어하는 숫자를 써봐 : ";
-		cin >> name >> num;
-		cout << name << " 왜그러니..." << endl;
+		std::cout << "나쁜놈의 이름과 나이를 입력하세요: ";
+		std::cin >> name >> num;
 	}
 
-	cout << "9999맞아 잘했어... 그럼 이제 9999대 맞자" << endl;
-
+	std::cout << "BH: Cristal 보다 " << num << "살이나 어린주제에..." << name << "나쁜련..." << std::endl;
+	
+	
 	return 0;
 }
