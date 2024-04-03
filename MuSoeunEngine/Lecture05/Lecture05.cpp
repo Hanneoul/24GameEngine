@@ -1,4 +1,9 @@
-﻿#pragma comment(lib, "Opengl32.lib")
+﻿//1. 삼각형으로 별을 그리시오
+//2. 마우스 좌클릭 후에 드래그해서 드래그한만큼 별을 이동해주세요
+//3. 우클릭하고 우측으로 드래그한만큼 확대 좌측으로 드래그한만큼 축소를 해주세요.
+//   (별의 중점을 기준으로 확대/축소가 돼야합니다.)
+
+#pragma comment(lib, "Opengl32.lib")
 
 #include <GLFW/glfw3.h>
 #include <iostream>
