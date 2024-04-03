@@ -3,6 +3,9 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+float moveFactor = 0.0f;
+float scaleFactor = 1.0f;
+
 void errorCallback(int error, const char* description)
 {
 	std::cerr << "GLFW Error: " << description << std::endl;
@@ -14,6 +17,14 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	{
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 	}
+	if (key == GLFW_KEY_UP && action == GLFW_PRESS)
+	{
+		moveFactor += 0.01f;
+	}
+	if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
+	{
+		scaleFactor += 0.1f;
+	}
 }
 
 int render()
@@ -21,13 +32,13 @@ int render()
 	glBegin(GL_TRIANGLES);
 	//점1
 	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.0f, 1.0f);
+	glVertex2f(0.0f * scaleFactor, (1.0f+ moveFactor) * scaleFactor);
 	//점2
 	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.5f, 0.0f);
+	glVertex2f(0.5f * scaleFactor, (0.0f+ moveFactor) * scaleFactor);
 	//점3
 	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(-0.5f, 0.0f);
+	glVertex2f(-0.5f * scaleFactor, (0.0f+ moveFactor) * scaleFactor);
 	glEnd();
 	
 	return 0;
