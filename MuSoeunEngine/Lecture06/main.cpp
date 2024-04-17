@@ -30,7 +30,7 @@ int initialize()
 {
 	return 0;
 }
-int release()
+int release() 
 {
 	return 0;
 }
