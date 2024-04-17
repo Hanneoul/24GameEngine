@@ -32,16 +32,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ObjectTest2.hpp">
+    <ClInclude Include="Star.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MObject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ObjectTest.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Star.hpp">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MObject.h">
+    <ClInclude Include="ObjectTest2.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
