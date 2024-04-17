@@ -35,19 +35,36 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 int render()
 {
 	glBegin(GL_TRIANGLES);
-	//점1
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.0f * scaleFactor, (1.0f+ moveFactor) * scaleFactor);
-	//점2
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.5f * scaleFactor, (0.0f+ moveFactor) * scaleFactor);
-	//점3
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(-0.5f * scaleFactor, (0.0f+ moveFactor) * scaleFactor);
+	
+	glColor3f(0.7f, 0.8f, 0.85f);
+	glVertex2f(0.0f, 0.5f);
+	glColor3f(0.7f, 0.8f, 0.85f);
+	glVertex2f(-0.2f, 0.0f);
+	glColor3f(0.7f, 0.8f, 0.85f);
+	glVertex2f(0.0f, -0.5f);
+
+	glColor3f(0.7f, 0.8f, 0.85f);
+	glVertex2f(0.0f, -0.5f);
+	glColor3f(0.7f, 0.8f, 0.85f);
+	glVertex2f(0.2f, 0.0f);
+	glColor3f(0.7f, 0.8f, 0.85f);
+	glVertex2f(0.0f, 0.5f);
+	
+	
 	glEnd();
 	
 	return 0;
 }
+
+	////점1
+	//glColor3f(1.0f, 1.0f, 1.0f);
+	//glVertex2f(0.0f * scaleFactor, (1.0f+ moveFactor) * scaleFactor);
+	////점2
+	//glColor3f(1.0f, 1.0f, 1.0f);
+	//glVertex2f(0.5f * scaleFactor, (0.0f+ moveFactor) * scaleFactor);
+	////점3
+	//glColor3f(1.0f, 1.0f, 1.0f);
+	//glVertex2f(-0.5f * scaleFactor, (0.0f+ moveFactor) * scaleFactor);
 
 
 int main(void)
