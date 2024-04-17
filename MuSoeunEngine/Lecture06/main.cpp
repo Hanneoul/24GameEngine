@@ -1,4 +1,19 @@
-﻿#include "stdafx.h"
+﻿//과제물
+// 1. "HW06"이름으로 프로젝트를 생성하시오
+// 2. #include <vector>    대신에 #include "MSList.h" 를 만드시오. (MSList.h, MSList.cpp)
+//    ( Musoen(무소은엔진용) Struct(자료구조) List(리스트) )
+//    ( vector는 절대 쓰지 마시오)
+// 3. MSList 헤더파일 참조해서 cpp 만들것.
+// 4. cpp파일에 함수 구현 내용을 작성하시오. ( ObjectTest처럼 )
+// 
+// 5. 게임에 5주차 과제였던 별을 손톱크기로 조그맣게 그릴 수 있도록 star.hpp의 크리스탈 수정.
+// 6. 랜덤하게 화면에 위치와 색을 바꿔가며 별 300 개를 그릴 수 있도록 작성하시오.
+//    (List에 모든 Star객체들을 담아주세요)
+//    (화면에 알록달록한 별이 가득하게 random 이라는 stl을 사용해서 만들어주세요.)
+
+
+
+#include "stdafx.h"
 
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -45,24 +60,16 @@ int initialize()
 	list.push_back(temp[1]);
 	list.push_back(temp[2]);
 	list.push_back(temp[3]);
-
-	
-
-	
-
-
-
+		
 	return 0;
 }
 int release() 
-{
-	
+{	
 	return 0;
 }
 
 int update()
-{
-	
+{	
 	return 0;
 }
 

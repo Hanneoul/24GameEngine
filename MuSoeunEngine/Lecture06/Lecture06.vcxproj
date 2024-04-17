@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MObject.h" />
+    <ClInclude Include="MSList.h" />
     <ClInclude Include="ObjectTest.h" />
     <ClInclude Include="ObjectTest2.hpp" />
     <ClInclude Include="Star.hpp" />
