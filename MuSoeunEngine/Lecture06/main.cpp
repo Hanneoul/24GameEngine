@@ -1,5 +1,5 @@
 ﻿//과제물
-// 1. "HW06"이름으로 프로젝트를 생성하시오
+// 1. 이클래스 숙지하고 프로젝트를 생성하시오
 // 2. #include <vector>    대신에 #include "MSList.h" 를 만드시오. (MSList.h, MSList.cpp)
 //    ( Musoen(무소은엔진용) Struct(자료구조) List(리스트) )
 //    ( vector는 절대 쓰지 마시오)
@@ -13,12 +13,13 @@
 
 
 
-#include "stdafx.h"
+#pragma comment(lib, "Opengl32.lib")
 
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <vector>
 
+#include "Star.hpp"
 
 float moveFactor = 0.0f;
 float scaleFactor = 1.0f;
