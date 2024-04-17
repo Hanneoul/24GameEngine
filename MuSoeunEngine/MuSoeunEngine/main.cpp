@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+﻿#pragma comment(lib, "Opengl32.lib")
 #include <GLFW/glfw3.h>
 #include <iostream>
 
@@ -24,28 +24,6 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	{
 		scaleFactor += 0.1f;
 	}
-}
-
-int initialize()
-{
-	return 0;
-}
-int release()
-{
-	return 0;
-}
-
-int update()
-{
-	return 0;
-}
-
-int render()
-{
-	glClearColor(0.1f, 0.2f, 0.5f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	return 0;
 }
 
 int main(void)

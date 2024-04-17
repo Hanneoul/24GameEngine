@@ -9,3 +9,13 @@ MObject::~MObject()
 {
 
 }
+
+void MObject::update()
+{
+
+}
+
+void MObject::render()
+{
+
+}
