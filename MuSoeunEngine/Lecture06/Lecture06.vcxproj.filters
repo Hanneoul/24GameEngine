@@ -27,24 +27,24 @@
     <ClCompile Include="ObjectTest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MComponent.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MObject.h">
+    <ClInclude Include="Star.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectTest2.hpp">
+    <ClInclude Include="MObject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ObjectTest.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="MComponent.h">
+    <ClInclude Include="ObjectTest2.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

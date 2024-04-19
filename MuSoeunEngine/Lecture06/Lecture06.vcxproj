@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MComponent.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MObject.cpp" />
     <ClCompile Include="ObjectTest.cpp" />
@@ -137,10 +136,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MComponent.h" />
     <ClInclude Include="MObject.h" />
+    <ClInclude Include="MSList.h" />
     <ClInclude Include="ObjectTest.h" />
     <ClInclude Include="ObjectTest2.hpp" />
+    <ClInclude Include="Star.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

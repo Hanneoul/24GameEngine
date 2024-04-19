@@ -1,9 +1,57 @@
-﻿#include "stdafx.h"
+﻿#pragma comment(lib, "Opengl32.lib")
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <vector>
+
+#include "MObject.h"
+#include "MODiamond.hpp"
+
+
 
 float moveFactor = 0.0f;
 float scaleFactor = 1.0f;
+
+std::vector<MObject*> objects;
+
+int initialize()
+{
+	for (int i = 0; i < 1000;i++)
+	{
+		objects.push_back(new MODiamond());
+	}
+	return 0;
+}
+
+int release()
+{
+	for (int i = 0; i < objects.size();i++)
+	{
+		delete(objects[i]);
+	}
+	return 0;
+}
+
+int update()
+{
+	for (int i = 0; i < objects.size();i++)
+	{
+		objects[i]->update();
+	}
+	return 0;
+}
+int render()
+{
+	glClearColor(0.3f, 0.5f, 0.7f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	for (int i = 0; i < objects.size();i++)
+	{
+		objects[i]->render();
+	}
+	return 0;
+}
+
+
 
 void errorCallback(int error, const char* description)
 {
@@ -24,28 +72,6 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	{
 		scaleFactor += 0.1f;
 	}
-}
-
-int initialize()
-{
-	return 0;
-}
-int release()
-{
-	return 0;
-}
-
-int update()
-{
-	return 0;
-}
-
-int render()
-{
-	glClearColor(0.1f, 0.2f, 0.5f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	return 0;
 }
 
 int main(void)
