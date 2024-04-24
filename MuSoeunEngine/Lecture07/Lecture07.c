@@ -20,14 +20,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	{
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 	}
-	if (key == GLFW_KEY_UP && action == GLFW_PRESS)
-	{
-		moveFactor += 0.01f;
-	}
-	if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
-	{
-		scaleFactor += 0.1f;
-	}
+	
 }
 
 struct Star 
