@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lecture07.cpp" />
+    <ClCompile Include="Lecture07.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
