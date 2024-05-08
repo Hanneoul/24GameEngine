@@ -35,37 +35,58 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 
 int setVertexRotation(float x, float y, float angle_degree)
 {
-	glColor3f(0.7f, 0.8f, 0.85f);
-	glVertex2f(x*cos(angle_degree)-(y*sin(angle_degree)), x * sin(angle_degree) + (y * cos(angle_degree)));
+	float M_PI = 3.14;
+	float angle = angle_degree / 180 * M_PI;
+	
+	glVertex2f(x*cos(angle)-(y*sin(angle)), x * sin(angle) + (y * cos(angle)));
 	return 0;
 }
+
+
 
 float angle = 0;
 
 int render()
 {
-	glBegin(GL_TRIANGLES);
+	glBegin(GL_TRIANGLE_FAN);
+	glColor3f(0.7f, 0.8f, 0.85f);
+	setVertexRotation(0.0f, 0.0f, 0);
 
-	
-	setVertexRotation(0.0f, 0.5f, angle);
-	
-	setVertexRotation(-0.2f, 0.0f, angle);
-	
-	setVertexRotation(0.0f, -0.5f, angle);
-	
-	setVertexRotation(0.0f, -0.5f, angle);
-	
-	setVertexRotation(0.2f, 0.0f, angle);
-	
-	setVertexRotation(0.0f, 0.5f, angle);
+	for (int i = 0;i < 360;i=i+72)
+	{
+		setVertexRotation(1.0f, 0.0f, i+ angle);
+		setVertexRotation(0.5f, 0.0f, i+36+ angle);		
+	}
 
+	setVertexRotation(1.0f, 0.0f, angle);
 
 	glEnd();
 
-	angle = angle + 0.1;
+	angle += 1;
+
+	
+	glLineWidth(10.0f);
+	
+	glBegin(GL_LINES);
+	glColor3f(0.0f, 0.0f, 0.0f);
+	
+	
+
+	for (int i = 0;i < 360;i = i + 72)
+	{
+		setVertexRotation(0.5f, 0.0f, i - 36 + angle);
+		setVertexRotation(1.0f, 0.0f, i + angle);
+
+		setVertexRotation(1.0f, 0.0f, i + angle);
+		setVertexRotation(0.5f, 0.0f, i + 36 + angle);		
+	}
+
+	glEnd();
 
 	return 0;
 }
+
+
 
 ////점1
 //glColor3f(1.0f, 1.0f, 1.0f);
