@@ -23,7 +23,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	
 }
 
-struct Star 
+struct Star                                                               
 {
 	float posX, posY;
 	float scale;
