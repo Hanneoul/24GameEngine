@@ -1,0 +1,12 @@
+﻿  ConsoleApplication6.cpp
+D:\2023\packages\glfw.3.4.0\build\native\include\GLFW\glfw3.h(3235,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'ConsoleApplication6.cpp'을(를) 컴파일하는 중)
+  
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(15,26): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(16,23): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(17,25): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(18,22): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(35,21): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(56,35): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\2023\ConsoleApplication6\ConsoleApplication6.cpp(67,36): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ConsoleApplication6.vcxproj -> D:\2023\x64\Debug\ConsoleApplication6.exe
