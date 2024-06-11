@@ -6,8 +6,18 @@
 
 using namespace std;
 
+void Eventhandler()
+{
+	cout << "끄아아아아아" << endl;
+}
+
+
 int main()
 {
+	void (*onCollisionEnter)();
+
+	onCollisionEnter = Eventhandler;
+
 	int count = 0;
 
 	chrono::steady_clock::time_point prev_end = chrono::steady_clock::now();
@@ -28,5 +38,6 @@ int main()
 		//출력
 		count++;
 		cout << count << "   dur:" << delay_time_ms << endl;
+		onCollisionEnter();
 	}
 }
