@@ -1,17 +1,23 @@
 ﻿#pragma comment(lib, "Opengl32.lib")
 
+#define _CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
+
+#ifdef _DEBUG
+#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
+#else
+#define DBG_NEW new
+#endif
+
 #include <GLFW/glfw3.h>
-#include <iostream>
+#include <stdio.h>
 #include <chrono>
 #include <thread>
 #include <cmath>
 
-float moveFactor = 0.0f;
-float scaleFactor = 1.0f;
-
 void errorCallback(int error, const char* description)
 {
-	std::cerr << "GLFW Error: " << description << std::endl;
+	printf("GLFW Error: %s", description);
 }
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -19,35 +25,10 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 
 }
 
-struct Vertex
-{
-	float x;
-	float y;
-};
-
-struct Vector
-{
-	float x_meter;
-	float y_meter;
-};
-
-int MoveVertex(Vertex point, Vector meter)
+int Physics()
 {
 	return 0;
 }
-
-int RotateVertex(Vertex point, float angle_degree)
-{
-	return 0;
-}
-
-int ScaleVertex(Vertex point, Vector meter)
-{
-	return 0;
-}
-
-
-float angle = 0;
 
 int Initialize()
 {
@@ -67,6 +48,9 @@ int Render()
 
 int main(void)
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
+
 	//glfw라이브러리 초기화
 	if (!glfwInit())
 		return -1;
@@ -89,11 +73,9 @@ int main(void)
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents();
-		glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		Physics();
 		Update();
 		Render();
-
 		glfwSwapBuffers(window);
 	}
 
